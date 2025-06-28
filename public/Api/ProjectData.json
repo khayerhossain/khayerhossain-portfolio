@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "DevScoop",
+    "description": "A modern platform for developers to showcase and discover projects, share ideas, and connect with the dev community.",
+    "laptopImage": "https://i.ibb.co/6Kb6Fyh/Screenshot-2025-06-28-231121-front.png",
+    "mobileImage": "https://i.ibb.co/1GgbZV67/Screenshot-2025-06-28-231142-portrait.png",
+    "detailsLink": "#",
+    "liveLink": "https://devscoop-509dd.web.app/",
+    "githubLink": "https://github.com/khayerhossain/dev-scoop"
+  },
+  {
+    "id": 2,
+    "title": "GardenSpot",
+    "description": "A friendly web app for gardeners to share tips, explore plant care guides, and build a gardening community.",
+    "laptopImage": "https://i.ibb.co/Cs5gc4SZ/Screenshot-2025-06-28-231230-front.png",
+    "mobileImage": "https://i.ibb.co/MDZPrc7H/Screenshot-2025-06-28-231252-portrait.png",
+    "detailsLink": "#",
+    "liveLink": "https://garden-spot-15a69.web.app/",
+    "githubLink": "https://github.com/khayerhossain/garden-society"
+  },
+  {
+    "id": 3,
+    "title": "AppNest",
+    "description": "An app showcase site to discover, review, and download the latest apps with sleek design and responsive layout.",
+    "laptopImage": "https://i.ibb.co/35dmZ3tV/Screenshot-2025-06-28-230517-front.png",
+    "mobileImage": "https://i.ibb.co/QFWz6FKf/Screenshot-2025-06-28-230635-portrait.png",
+    "detailsLink": "#",
+    "liveLink": "https://assingment-09-5c3ab.web.app/",
+    "githubLink": "https://github.com/khayerhossain/app-nest"
+  }
+]
