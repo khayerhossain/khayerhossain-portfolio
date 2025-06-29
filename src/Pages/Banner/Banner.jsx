@@ -1,24 +1,38 @@
 import React from "react";
-import { FaInstagram, FaDribbble, FaGithub, FaPaperPlane, FaMouse } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaDribbble,
+  FaGithub,
+  FaPaperPlane,
+  FaMouse,
+} from "react-icons/fa";
 import bannerImage from "../../assets/profile-one.jpg";
 import { motion } from "framer-motion";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
 import Container from "../../Container/Container";
+import { Link } from "react-router";
 
 const Banner = () => {
   return (
-    <section className="bg-white flex items-center py-16 lg:py-28 relative">
+    <section className="bg-white flex items-center py-16 lg:py-[100px] relative">
       <Container>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          
           {/* Left Side */}
           <div className="flex flex-col lg:flex-row items-center gap-6 w-full">
-            
             {/* Social Icons */}
             <div className="flex lg:flex-col gap-6 text-black text-xl">
-              <a href="https://www.instagram.com/khayerhossain_45?igsh=NXNrOGY3dWwyYzlo&utm_source=qr" target="_blank"><FaInstagram /></a>
-              <a href="https://garden-spot-15a69.web.app/" target="_blank"><FaDribbble /></a>
-              <a href="https://github.com/khayerhossain" target="_blank"><FaGithub /></a>
+              <a
+                href="https://www.instagram.com/khayerhossain_45?igsh=NXNrOGY3dWwyYzlo&utm_source=qr"
+                target="_blank"
+              >
+                <FaInstagram />
+              </a>
+              <a href="https://garden-spot-15a69.web.app/" target="_blank">
+                <FaDribbble />
+              </a>
+              <a href="https://github.com/khayerhossain" target="_blank">
+                <FaGithub />
+              </a>
             </div>
 
             {/* Text Content */}
@@ -30,9 +44,9 @@ const Banner = () => {
             >
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
                 <Typewriter
-                  words={['Khayer Hossain']}
+                  words={["Khayer Hossain"]}
                   // loop={Infinity}
-                  cursorStyle='|'
+                  cursorStyle="|"
                   typeSpeed={120}
                   deleteSpeed={80}
                   delaySpeed={1000}
@@ -46,9 +60,16 @@ const Banner = () => {
                 I’m a passionate developer based in Bangladesh, <br />
                 dedicated to building modern and meaningful digital experiences.
               </p>
-              <button className="flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-2xl hover:bg-gray-900 transition">
-                Say Hello <FaPaperPlane />
-              </button>
+              <Link
+                to="contact" 
+                smooth={true}
+                duration={500} 
+                offset={-70} 
+              >
+                <button className="flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-2xl hover:bg-gray-900 transition cursor-pointer">
+                  Say Hello <FaPaperPlane />
+                </button>
+              </Link>
             </motion.div>
           </div>
 

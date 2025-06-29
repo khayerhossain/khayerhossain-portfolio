@@ -1,18 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
-  FaLinkedin,
-  FaTwitter,
-  FaWhatsapp,
-  FaEnvelope,
-  FaPaperPlane,
-  FaUser,
-  FaCommentDots,
+  FaLinkedin, FaTwitter, FaWhatsapp, FaEnvelope, FaPaperPlane, FaUser, FaCommentDots
 } from "react-icons/fa";
-import { FaHandPointer } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Container from "../../Container/Container";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.sendForm(
+      "service_k0fi7af",      // service ID
+      "template_rfaxe3d",     // template ID
+      form.current,
+      "wjY8H6QCe3DamyXSJ"    // public key
+    )
+    .then(() => {
+      setLoading(false);
+      toast.success("Message sent successfully!");
+      e.target.reset();
+    })
+    .catch((error) => {
+      setLoading(false);
+      toast.error("Failed to send message, please try again.");
+      console.error(error);
+    });
+  };
+
   return (
     <section className="bg-white py-20" id="contact">
       <Container>
@@ -37,7 +57,7 @@ const Contact = () => {
             </motion.p>
           </div>
 
-          {/* Flex layout for equal height and vertical center */}
+          {/* Flex layout */}
           <div className="md:flex md:gap-10 md:items-center">
             {/* Left Side - Contact Cards */}
             <motion.div
@@ -79,21 +99,18 @@ const Contact = () => {
                       href={card.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-black text-sm hover:underline overflow-hidden relative w-20" 
+                      className="text-black text-sm hover:underline overflow-hidden relative w-20"
                     >
                       <motion.span
-                        style={{
-                          display: "inline-block",
-                          whiteSpace: "nowrap",
-                        }}
-                        animate={{ x: ["-25%", "25%"] }}
-                        transition={{
-                          repeat: Infinity,
-                          duration: 3,
-                          ease: "linear",
-                        }}
+                        // style={{ display: "inline-block", whiteSpace: "nowrap" }}
+                        // animate={{ x: ["-25%", "25%"] }}
+                        // transition={{
+                        //   repeat: Infinity,
+                        //   duration: 3,
+                        //   ease: "linear",
+                        // }}
                       >
-                        Connect →
+                       Click to connect →
                       </motion.span>
                     </a>
                   </div>
@@ -103,49 +120,54 @@ const Contact = () => {
 
             {/* Right Side - Contact Form */}
             <motion.form
+              ref={form}
+              onSubmit={sendEmail}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="flex-1 mt-10 md:mt-0 space-y-6"
             >
-              {/* Name field with icon */}
               <div className="relative">
                 <FaUser className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black" />
                 <input
                   type="text"
+                  name="user_name"               // <-- MUST match EmailJS template variable
                   placeholder="Your name"
+                  required
                   className="w-full pl-10 pr-5 py-3 border border-gray-300 rounded-xl shadow focus:outline-none focus:ring-2 focus:ring-black transition"
                 />
               </div>
 
-              {/* Email with icon */}
               <div className="relative">
                 <FaEnvelope className="absolute top-1/2 left-3 transform -translate-y-1/2 text-black" />
                 <input
                   type="email"
+                  name="user_email"             // <-- MUST match EmailJS template variable
                   placeholder="Your email"
+                  required
                   className="w-full pl-10 pr-5 py-3 border border-gray-300 rounded-xl shadow focus:outline-none focus:ring-2 focus:ring-black transition"
                 />
               </div>
 
-              {/* Description with icon and vertical resize */}
               <div className="relative">
                 <FaCommentDots className="absolute top-3 left-3 text-black" />
                 <textarea
+                  name="message"                // <-- MUST match EmailJS template variable
                   rows="4"
                   placeholder="Tell me about your project"
+                  required
                   className="w-full pl-10 pr-5 pt-3 pb-2 border border-gray-300 rounded-xl shadow focus:outline-none focus:ring-2 focus:ring-black transition resize-y min-h-[4rem] max-h-[20rem]"
-                ></textarea>
+                />
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-gray-900 transition"
+                disabled={loading}
+                className="cursor-pointer bg-black text-white px-6 py-3 rounded-xl flex items-center gap-3 hover:bg-gray-900 transition"
               >
                 <FaPaperPlane className="text-white" />
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </motion.form>
           </div>

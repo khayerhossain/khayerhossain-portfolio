@@ -82,7 +82,7 @@ const Navbar = () => {
             to="/contact"
             className="btn btn-sm bg-gray-800 text-white rounded-full hover:bg-gray-900 transition"
           >
-            Download CV
+            View CV
           </NavLink>
         </div>
 
