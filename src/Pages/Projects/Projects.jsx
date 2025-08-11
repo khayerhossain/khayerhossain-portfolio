@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Container from "../../Container/Container";
-import { FaExternalLinkAlt, FaTools, FaLayerGroup } from "react-icons/fa";
+import {
+  FaExternalLinkAlt,
+  FaTools,
+  FaLayerGroup,
+  FaGithub,
+} from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdTouchApp } from "react-icons/md";
 
@@ -91,7 +96,6 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Image in card */}
                 <div className="mb-4">
                   <img
                     src={project.laptopImage}
@@ -134,7 +138,7 @@ const Projects = () => {
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
-                className="bg-white rounded-lg shadow-lg max-w-xl w-full p-5 relative mx-4"
+                className="bg-white rounded-lg shadow-lg max-w-xl w-full p-6 relative mx-4 max-h-[85vh] overflow-y-auto"
                 variants={modalVariants}
                 onClick={(e) => e.stopPropagation()}
               >
@@ -147,33 +151,21 @@ const Projects = () => {
                   &times;
                 </button>
 
+                {/* Title */}
                 <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <FaLayerGroup /> {selectedProject.title}
                 </h2>
 
+                {/* Brief Description */}
                 <p className="text-gray-700 mb-4">
                   {selectedProject.description}
                 </p>
-
-                {/* Features */}
-                {selectedProject.details?.features && (
-                  <>
-                    <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                      Features
-                    </h3>
-                    <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1 max-h-36 overflow-auto">
-                      {selectedProject.details.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
 
                 {/* Tech Stack */}
                 {selectedProject.details?.techStack && (
                   <>
                     <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                      <FaTools /> Tech Stack
+                      <FaTools /> Main Tech Stack
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4 text-gray-700">
                       <div>
@@ -200,16 +192,47 @@ const Projects = () => {
                   </>
                 )}
 
-                {/* Live Demo Link */}
-                <div className="flex gap-4 mt-4">
+                {/* Challenges */}
+                {selectedProject.details?.challenges && (
+                  <>
+                    <h3 className="text-lg font-semibold mb-2">Challenges</h3>
+                    <p className="text-gray-700 mb-4 max-h-32 overflow-auto">
+                      {selectedProject.details.challenges}
+                    </p>
+                  </>
+                )}
+
+                {/* Future Plans */}
+                {selectedProject.details?.futurePlans && (
+                  <>
+                    <h3 className="text-lg font-semibold mb-2">Future Plans</h3>
+                    <p className="text-gray-700 mb-4 max-h-32 overflow-auto">
+                      {selectedProject.details.futurePlans}
+                    </p>
+                  </>
+                )}
+
+                {/* Links */}
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
                   <a
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-xl text-sm hover:bg-black transition w-full justify-center"
+                    className="flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-xl text-sm hover:bg-black transition justify-center"
                   >
                     <FaExternalLinkAlt /> Live Demo
                   </a>
+
+                  {selectedProject.githubLink && (
+                    <a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 bg-gray-900 text-white px-4 py-2 rounded-xl text-sm hover:bg-black transition justify-center"
+                    >
+                      <FaGithub /> GitHub
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </motion.div>

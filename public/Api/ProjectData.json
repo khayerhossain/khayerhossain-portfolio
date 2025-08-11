@@ -8,7 +8,6 @@
     "liveLink": "https://devscoop-509dd.web.app/",
     "githubLink": "https://github.com/khayerhossain/dev-scoop",
     "details": {
-      "overview": "A sleek SaaS-style platform built with React & MongoDB to explore and manage developer resources.",
       "features": [
         "User signup/login with JWT authentication",
         "Protected routes using react-router",
@@ -20,24 +19,26 @@
       ],
       "techStack": {
         "frontend": [
-          "React ^18.2.0",
-          "react-router-dom ^6.11.1",
-          "tailwindcss ^3.4.0",
-          "daisyui ^2.51.7",
-          "firebase ^10.16.0",
-          "react-icons ^4.10.1",
-          "react-hot-toast ^2.4.1",
-          "lottie-react ^2.3.2",
-          "framer-motion ^10.12.16"
+          "React",
+          "react-router-dom",
+          "tailwindcss",
+          "daisyui",
+          "firebase",
+          "react-icons",
+          "react-hot-toast",
+          "lottie-react",
+          "framer-motion"
         ],
         "backend": [
-          "Node.js ^20.7.0",
-          "Express.js ^4.18.2",
-          "MongoDB (mongoose) ^7.7.0",
-          "dotenv ^16.3.0",
-          "jsonwebtoken ^9.0.2"
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "dotenv",
+          "jsonwebtoken"
         ]
-      }
+      },
+      "challenges": "Handling real-time authentication and ensuring smooth animations across devices was challenging.",
+      "futurePlans": "Add social login options and integrate AI-based project recommendations."
     }
   },
   {
@@ -49,7 +50,6 @@
     "liveLink": "https://garden-spot-15a69.web.app/",
     "githubLink": "https://github.com/khayerhossain/garden-society",
     "details": {
-      "overview": "GardenSpot is a community-driven gardening platform where users can explore gardener profiles, share and browse gardening tips, view event winners, and showcase their gardening experiences.",
       "features": [
         "Homepage with banner, featured gardeners, gardening tips, and event winners",
         "Explore public gardener profiles",
@@ -62,23 +62,20 @@
       ],
       "techStack": {
         "frontend": [
-          "React ^18.2.0",
-          "react-router-dom ^6.11.1",
-          "tailwindcss ^3.4.0",
-          "daisyui ^2.51.7",
-          "firebase ^10.16.0",
-          "react-icons ^4.10.1",
-          "react-hot-toast ^2.4.1",
-          "lottie-react ^2.3.2",
-          "framer-motion ^10.12.16"
+          "React",
+          "react-router-dom",
+          "tailwindcss",
+          "daisyui",
+          "firebase",
+          "react-icons",
+          "react-hot-toast",
+          "lottie-react",
+          "framer-motion"
         ],
-        "backend": [
-          "Node.js ^20.7.0",
-          "Express.js ^4.18.2",
-          "MongoDB (mongoose) ^7.7.0",
-          "dotenv ^16.3.0"
-        ]
-      }
+        "backend": ["Node.js", "Express.js", "MongoDB", "dotenv"]
+      },
+      "challenges": "Ensuring seamless image uploads and real-time updates without performance loss.",
+      "futurePlans": "Implement a plant disease detection feature using ML and expand community forums."
     }
   },
   {
@@ -90,7 +87,6 @@
     "liveLink": "https://fitnexus-14498.web.app/",
     "githubLink": "https://github.com/khayerhossain/fit-nexus",
     "details": {
-      "overview": "FitNexus is a full-stack Fitness Management Platform that helps Admins, Trainers, and Members interact through class bookings, payment systems, community forums, trainer applications, and role-based dashboards.",
       "features": [
         "Firebase authentication with Email/Password & Google login",
         "JWT protection for secure APIs",
@@ -118,11 +114,14 @@
         ],
         "backend": [
           "Express.js",
-          "MongoDB (CRUD)",
-          "JWT Verification Middleware",
-          "Stripe Payment Integration"
+          "MongoDB",
+          "JWT Middleware",
+          "Stripe Integration"
         ]
-      }
+      },
+      "challenges": "Managing complex role-based permissions and integrating secure payment gateways.",
+      "futurePlans": "Add mobile app support and AI-based personalized workout plans."
     }
   }
 ]
+ 
