@@ -16,7 +16,7 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.sendForm(
-      "service_k0fi7af",      // service ID
+      "service_k0fi7af",      // service IDe
       "template_rfaxe3d",     // template ID
       form.current,
       "wjY8H6QCe3DamyXSJ"    // public key
@@ -71,8 +71,8 @@ const Contact = () => {
                 {
                   icon: <FaLinkedin className="text-black text-xl" />,
                   title: "LinkedIn",
-                  detail: "linkedin.com/in/khayer-hossain-5086a6364",
-                  href: "https://www.linkedin.com/in/khayer-hossain-5086a6364/",
+                  detail: "https://www.linkedin.com/in/khayer-hossain/",
+                  href: "https://www.linkedin.com/in/khayer-hossain/",
                 },
                 {
                   icon: <FaWhatsapp className="text-black text-xl" />,

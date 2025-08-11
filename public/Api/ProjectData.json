@@ -3,30 +3,126 @@
     "id": 1,
     "title": "DevScoop",
     "description": "A modern platform for developers to showcase and discover projects, share ideas, and connect with the dev community.",
-    "laptopImage": "https://i.ibb.co/6Kb6Fyh/Screenshot-2025-06-28-231121-front.png",
+    "laptopImage": "https://i.ibb.co.com/S4V8jg2M/Screenshot-2025-08-11-012320-front.png",
     "mobileImage": "https://i.ibb.co/1GgbZV67/Screenshot-2025-06-28-231142-portrait.png",
-    "detailsLink": "#",
     "liveLink": "https://devscoop-509dd.web.app/",
-    "githubLink": "https://github.com/khayerhossain/dev-scoop"
+    "githubLink": "https://github.com/khayerhossain/dev-scoop",
+    "details": {
+      "overview": "A sleek SaaS-style platform built with React & MongoDB to explore and manage developer resources.",
+      "features": [
+        "User signup/login with JWT authentication",
+        "Protected routes using react-router",
+        "CRUD operations for developer resources",
+        "Firebase email/password & Google authentication",
+        "Notifications via react-hot-toast",
+        "Responsive UI with Tailwind + DaisyUI",
+        "Smooth animations with Lottie and Framer Motion"
+      ],
+      "techStack": {
+        "frontend": [
+          "React ^18.2.0",
+          "react-router-dom ^6.11.1",
+          "tailwindcss ^3.4.0",
+          "daisyui ^2.51.7",
+          "firebase ^10.16.0",
+          "react-icons ^4.10.1",
+          "react-hot-toast ^2.4.1",
+          "lottie-react ^2.3.2",
+          "framer-motion ^10.12.16"
+        ],
+        "backend": [
+          "Node.js ^20.7.0",
+          "Express.js ^4.18.2",
+          "MongoDB (mongoose) ^7.7.0",
+          "dotenv ^16.3.0",
+          "jsonwebtoken ^9.0.2"
+        ]
+      }
+    }
   },
   {
     "id": 2,
     "title": "GardenSpot",
     "description": "A friendly web app for gardeners to share tips, explore plant care guides, and build a gardening community.",
-    "laptopImage": "https://i.ibb.co/35dmZ3tV/Screenshot-2025-06-28-230517-front.png",
+    "laptopImage": "https://i.ibb.co.com/vCqKw860/Screenshot-2025-08-11-232727-front.png",
     "mobileImage": "https://i.ibb.co/MDZPrc7H/Screenshot-2025-06-28-231252-portrait.png",
-    "detailsLink": "#",
     "liveLink": "https://garden-spot-15a69.web.app/",
-    "githubLink": "https://github.com/khayerhossain/garden-society"
+    "githubLink": "https://github.com/khayerhossain/garden-society",
+    "details": {
+      "overview": "GardenSpot is a community-driven gardening platform where users can explore gardener profiles, share and browse gardening tips, view event winners, and showcase their gardening experiences.",
+      "features": [
+        "Homepage with banner, featured gardeners, gardening tips, and event winners",
+        "Explore public gardener profiles",
+        "Browse tips posted by others",
+        "Share your own tips with images and descriptions",
+        "Manage your submitted tips (edit/delete)",
+        "Firebase authentication with email/password & Google login",
+        "Mobile-first responsive design",
+        "Smooth animations with Lottie and Framer Motion"
+      ],
+      "techStack": {
+        "frontend": [
+          "React ^18.2.0",
+          "react-router-dom ^6.11.1",
+          "tailwindcss ^3.4.0",
+          "daisyui ^2.51.7",
+          "firebase ^10.16.0",
+          "react-icons ^4.10.1",
+          "react-hot-toast ^2.4.1",
+          "lottie-react ^2.3.2",
+          "framer-motion ^10.12.16"
+        ],
+        "backend": [
+          "Node.js ^20.7.0",
+          "Express.js ^4.18.2",
+          "MongoDB (mongoose) ^7.7.0",
+          "dotenv ^16.3.0"
+        ]
+      }
+    }
   },
   {
     "id": 3,
-    "title": "AppNest",
-    "description": "An app showcase site to discover, review, and download the latest apps with sleek design and responsive layout.",
-     "laptopImage": "https://i.ibb.co/Cs5gc4SZ/Screenshot-2025-06-28-231230-front.png",
-    "mobileImage": "https://i.ibb.co/QFWz6FKf/Screenshot-2025-06-28-230635-portrait.png",
-    "detailsLink": "#",
-    "liveLink": "https://assingment-09-5c3ab.web.app/",
-    "githubLink": "https://github.com/khayerhossain/app-nest"
+    "title": "FitNexus",
+    "description": "FitNexus is a complete gym management web app that streamlines memberships, scheduling, trainer assignments, and secure payments in one platform.",
+    "laptopImage": "https://i.ibb.co.com/ynZLZR9D/Screenshot-2025-08-11-010820-front.png",
+    "mobileImage": "",
+    "liveLink": "https://fitnexus-14498.web.app/",
+    "githubLink": "https://github.com/khayerhossain/fit-nexus",
+    "details": {
+      "overview": "FitNexus is a full-stack Fitness Management Platform that helps Admins, Trainers, and Members interact through class bookings, payment systems, community forums, trainer applications, and role-based dashboards.",
+      "features": [
+        "Firebase authentication with Email/Password & Google login",
+        "JWT protection for secure APIs",
+        "Role-based access: Admin, Trainer, Member",
+        "Admin can manage all users, change roles, view transactions, manage classes, and review trainer applications",
+        "Trainer can apply to become trainer, manage assigned classes, view earnings, and contribute to forums",
+        "Member can book classes, make Stripe payments, submit reviews, and join forums",
+        "Community forum with role badges",
+        "Stripe integration for secure payments",
+        "SweetAlert confirmations and feedback system",
+        "Dashboard analytics with Recharts"
+      ],
+      "techStack": {
+        "frontend": [
+          "React",
+          "React Router",
+          "React Query",
+          "Axios",
+          "TailwindCSS",
+          "DaisyUI",
+          "Framer Motion",
+          "Recharts",
+          "SweetAlert2",
+          "Firebase Auth"
+        ],
+        "backend": [
+          "Express.js",
+          "MongoDB (CRUD)",
+          "JWT Verification Middleware",
+          "Stripe Payment Integration"
+        ]
+      }
+    }
   }
 ]
