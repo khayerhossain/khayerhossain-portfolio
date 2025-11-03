@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "SwapSkill Marketplace",
+    "title": "SwapSkill",
     "description": "A full-featured skill-sharing platform where users can learn, teach, and exchange skills with real-time chat, gamification, and secure payments — all powered by Next.js.",
     "laptopImage": "https://i.ibb.co.com/rG0F6pwF/Screenshot-2025-11-01-182237.png",
     "mobileImage": "https://i.ibb.co.com/R3pKp6Q/swap-skill-mobile.png",
@@ -37,7 +37,7 @@
     "id": 2,
     "title": "FitNexus",
     "description": "FitNexus is a complete gym management web app that streamlines memberships, scheduling, trainer assignments, and secure payments in one platform.",
-    "laptopImage": "https://i.ibb.co.com/bjbV8Pd2/2204-w037-n003-315a-p1-315.jpg",
+    "laptopImage": "https://i.ibb.co.com/KxPRnqdw/Screenshot-2025-11-03-193554.png",
     "mobileImage": "",
     "liveLink": "https://fitnexus-14498.web.app/",
     "githubLink": "https://github.com/khayerhossain/fit-nexus",

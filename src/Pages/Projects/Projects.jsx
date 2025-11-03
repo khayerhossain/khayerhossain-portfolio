@@ -97,7 +97,7 @@ const Projects = () => {
               <div className="relative bg-white rounded-2xl p-1">
                 <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-5 h-full flex flex-col">
                   {/* Project Number Badge */}
-                  <div className="absolute top-7 right-7 bg-gradient-to-br from-purple-500 to-pink-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
+                  <div className="absolute top-4 right-7 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
@@ -116,7 +116,7 @@ const Projects = () => {
                     <img
                       src={project.laptopImage}
                       alt={`${project.title} preview`}
-                      className="w-full h-48 object-cover transition-transform duration-700 group-hover/image:scale-110"
+                      className="w-full h-48 transition-transform duration-700 group-hover/image:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
 
@@ -141,7 +141,7 @@ const Projects = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setSelectedProject(project)}
-                      className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-gray-800 to-gray-900 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-gray-900 hover:to-black transition-all duration-300 shadow-md hover:shadow-lg"
+                      className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-gray-800 to-gray-900 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-gray-900 hover:to-black transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
                     >
                       <MdTouchApp className="text-lg" /> Details
                     </motion.button>
@@ -152,7 +152,7 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-md hover:shadow-lg"
+                      className="flex-1 flex items-center justify-center gap-2  text-white px-4 py-3 rounded-xl text-sm font-semibold bg-black/90 hover:bg-black transition-all duration-300 shadow-md hover:shadow-lg"
                     >
                       <FaExternalLinkAlt /> Live
                     </motion.a>
