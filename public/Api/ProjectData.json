@@ -1,9 +1,86 @@
 [
   {
     "id": 1,
+    "title": "SwapSkill Marketplace",
+    "description": "A full-featured skill-sharing platform where users can learn, teach, and exchange skills with real-time chat, gamification, and secure payments — all powered by Next.js.",
+    "laptopImage": "https://i.ibb.co.com/rG0F6pwF/Screenshot-2025-11-01-182237.png",
+    "mobileImage": "https://i.ibb.co.com/R3pKp6Q/swap-skill-mobile.png",
+    "liveLink": "https://swap-skill-marketplace.vercel.app/",
+    "githubLink": "https://github.com/khayerhossain/swap-skill-marketplace",
+    "details": {
+      "features": [
+        "Real-time chat with Socket.io",
+        "Gamified learning with badges, points, and leaderboards",
+        "AI chatbot for instant user assistance",
+        "Community feed similar to Facebook for post interactions",
+        "Secure payments using Stripe and SSLCommerz",
+        "Role-based access for users and admins",
+        "Analytics dashboard for admin monitoring",
+        "Responsive design with light/dark mode toggle"
+      ],
+      "techStack": {
+        "main": [
+          "Next.js",
+          "MongoDB",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Socket.io",
+          "Stripe",
+          "NextAuth"
+        ]
+      },
+      "challenges": "Integrating real-time chat and gamified features while maintaining fast server-side rendering with Next.js.",
+      "futurePlans": "Add AI-based skill recommendations and video-based learning rooms."
+    }
+  },
+  {
+    "id": 2,
+    "title": "FitNexus",
+    "description": "FitNexus is a complete gym management web app that streamlines memberships, scheduling, trainer assignments, and secure payments in one platform.",
+    "laptopImage": "https://i.ibb.co.com/bjbV8Pd2/2204-w037-n003-315a-p1-315.jpg",
+    "mobileImage": "",
+    "liveLink": "https://fitnexus-14498.web.app/",
+    "githubLink": "https://github.com/khayerhossain/fit-nexus",
+    "details": {
+      "features": [
+        "Firebase authentication with Email/Password & Google login",
+        "JWT protection for secure APIs",
+        "Role-based access: Admin, Trainer, Member",
+        "Admin can manage users, roles, transactions, classes, and trainer applications",
+        "Trainer can manage assigned classes, view earnings, and join forums",
+        "Member can book classes, make Stripe payments, submit reviews, and join forums",
+        "Community forum with role badges",
+        "Dashboard analytics with Recharts",
+        "SweetAlert confirmations and feedback system"
+      ],
+      "techStack": {
+        "frontend": [
+          "React",
+          "Router",
+          "Axios",
+          "TailwindCSS",
+          "DaisyUI",
+          "Framer Motion",
+          "Recharts",
+          "SweetAlert2",
+          "Firebase Auth"
+        ],
+        "backend": [
+          "Express.js",
+          "MongoDB",
+          "JWT Middleware",
+          "Stripe Integration"
+        ]
+      },
+      "challenges": "Managing complex role-based permissions and integrating secure payment gateways.",
+      "futurePlans": "Add mobile app support and AI-based personalized workout plans."
+    }
+  },
+  {
+    "id": 3,
     "title": "DevScoop",
     "description": "A modern platform for developers to showcase and discover projects, share ideas, and connect with the dev community.",
-    "laptopImage": "https://i.ibb.co.com/S4V8jg2M/Screenshot-2025-08-11-012320-front.png",
+    "laptopImage": "https://i.ibb.co.com/5hNfTm3X/Screenshot-2025-11-03-181508.png",
     "mobileImage": "https://i.ibb.co/1GgbZV67/Screenshot-2025-06-28-231142-portrait.png",
     "liveLink": "https://devscoop-509dd.web.app/",
     "githubLink": "https://github.com/khayerhossain/dev-scoop",
@@ -40,88 +117,5 @@
       "challenges": "Handling real-time authentication and ensuring smooth animations across devices was challenging.",
       "futurePlans": "Add social login options and integrate AI-based project recommendations."
     }
-  },
-  {
-    "id": 2,
-    "title": "GardenSpot",
-    "description": "A friendly web app for gardeners to share tips, explore plant care guides, and build a gardening community.",
-    "laptopImage": "https://i.ibb.co.com/vCqKw860/Screenshot-2025-08-11-232727-front.png",
-    "mobileImage": "https://i.ibb.co/MDZPrc7H/Screenshot-2025-06-28-231252-portrait.png",
-    "liveLink": "https://garden-spot-15a69.web.app/",
-    "githubLink": "https://github.com/khayerhossain/garden-society",
-    "details": {
-      "features": [
-        "Homepage with banner, featured gardeners, gardening tips, and event winners",
-        "Explore public gardener profiles",
-        "Browse tips posted by others",
-        "Share your own tips with images and descriptions",
-        "Manage your submitted tips (edit/delete)",
-        "Firebase authentication with email/password & Google login",
-        "Mobile-first responsive design",
-        "Smooth animations with Lottie and Framer Motion"
-      ],
-      "techStack": {
-        "frontend": [
-          "React",
-          "react-router-dom",
-          "tailwindcss",
-          "daisyui",
-          "firebase",
-          "react-icons",
-          "react-hot-toast",
-          "lottie-react",
-          "framer-motion"
-        ],
-        "backend": ["Node.js", "Express.js", "MongoDB", "dotenv"]
-      },
-      "challenges": "Ensuring seamless image uploads and real-time updates without performance loss.",
-      "futurePlans": "Implement a plant disease detection feature using ML and expand community forums."
-    }
-  },
-  {
-    "id": 3,
-    "title": "FitNexus",
-    "description": "FitNexus is a complete gym management web app that streamlines memberships, scheduling, trainer assignments, and secure payments in one platform.",
-    "laptopImage": "https://i.ibb.co.com/ynZLZR9D/Screenshot-2025-08-11-010820-front.png",
-    "mobileImage": "",
-    "liveLink": "https://fitnexus-14498.web.app/",
-    "githubLink": "https://github.com/khayerhossain/fit-nexus",
-    "details": {
-      "features": [
-        "Firebase authentication with Email/Password & Google login",
-        "JWT protection for secure APIs",
-        "Role-based access: Admin, Trainer, Member",
-        "Admin can manage all users, change roles, view transactions, manage classes, and review trainer applications",
-        "Trainer can apply to become trainer, manage assigned classes, view earnings, and contribute to forums",
-        "Member can book classes, make Stripe payments, submit reviews, and join forums",
-        "Community forum with role badges",
-        "Stripe integration for secure payments",
-        "SweetAlert confirmations and feedback system",
-        "Dashboard analytics with Recharts"
-      ],
-      "techStack": {
-        "frontend": [
-          "React",
-          "React Router",
-          "React Query",
-          "Axios",
-          "TailwindCSS",
-          "DaisyUI",
-          "Framer Motion",
-          "Recharts",
-          "SweetAlert2",
-          "Firebase Auth"
-        ],
-        "backend": [
-          "Express.js",
-          "MongoDB",
-          "JWT Middleware",
-          "Stripe Integration"
-        ]
-      },
-      "challenges": "Managing complex role-based permissions and integrating secure payment gateways.",
-      "futurePlans": "Add mobile app support and AI-based personalized workout plans."
-    }
   }
 ]
- 
