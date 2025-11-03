@@ -6,7 +6,7 @@ import {
   FaPaperPlane,
   FaMouse,
 } from "react-icons/fa";
-import bannerImage from "../../assets/profile-one.jpg";
+import bannerImage from "../../assets/profile-one.png";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Container from "../../Container/Container";

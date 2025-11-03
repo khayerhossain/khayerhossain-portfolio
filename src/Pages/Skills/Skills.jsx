@@ -6,8 +6,10 @@ import {
   FaReact,
   FaNodeJs,
   FaTools,
-  FaRegSmile,
   FaKey,
+  FaLock,
+  FaGithub,
+  FaFigma,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -17,165 +19,202 @@ import {
   SiAxios,
   SiFramer,
   SiReactrouter,
+  SiNextdotjs,
+  SiTypescript,
+  SiMongoose,
+  SiVite,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import Container from "../../Container/Container";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const iconColors = {
+  HTML: "#E34F26",
+  CSS: "#1572B6",
+  JS: "#F7DF1E",
+  REACT: "#61DAFB",
+  NEXT: "#000000",
+  TAILWIND: "#38BDF8",
+  TS: "#3178C6",
+  FIREBASE: "#FFCA28",
+  EXPRESS: "#303030",
+  NODE: "#3C873A",
+  MONGO: "#4DB33D",
+  MONGOOSE: "#880000",
+  JWT: "#E91E63",
+  NEXTAUTH: "#4C51BF",
+  ROUTER: "#CA4245",
+  DAISY: "#EAB308",
+  FRAMER: "#0055FF",
+  AXIOS: "#5A29E4",
+  GITHUB: "#181717",
+  FIGMA: "#F24E1E",
+  VITE: "#646CFF",
+};
+
 const Skills = () => {
   return (
-    <div className="bg-white py-20">
+    <div className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
       <Container>
+        {/* Header */}
         <div className="text-center">
-          <h2 className="text-4xl text-gray-800 font-bold">Skills</h2>
-          <p className="text-gray-600 max-w-xl mx-auto text-sm mt-2">
-            I specialize in full-stack development using the MERN stack and modern tools to build clean, responsive, and real-world applications.
+          <h2 className="text-4xl font-extrabold text-black bg-clip-text">
+            My Skills
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto text-sm mt-3">
+            I build high-quality, responsive, and full-stack web applications
+            using the latest modern tech stack.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-8">
-          {/* Frontend Card */}
+        {/* Skill Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          {/* FRONTEND */}
           <motion.div
-            className="flex-1 min-w-[250px] bg-gray-100 p-4 rounded-xl shadow-md text-left"
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            className="rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1 duration-300"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Frontend</h3>
-            <ol className="space-y-3 text-gray-800 list-none">
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaHtml5 className="text-lg" />
-                  <span className="font-medium">HTML5</span>
+            <h3 className="text-xl font-semibold mb-5 text-gray-800 border-b border-gray-200 pb-2">
+              Frontend
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { icon: <FaHtml5 color={iconColors.HTML} />, name: "HTML5" },
+                { icon: <FaCss3Alt color={iconColors.CSS} />, name: "CSS3" },
+                {
+                  icon: <FaJsSquare color={iconColors.JS} />,
+                  name: "JavaScript",
+                },
+                {
+                  icon: <FaReact color={iconColors.REACT} />,
+                  name: "React.js",
+                },
+                {
+                  icon: <SiNextdotjs color={iconColors.NEXT} />,
+                  name: "Next.js",
+                },
+                {
+                  icon: <SiTailwindcss color={iconColors.TAILWIND} />,
+                  name: "Tailwind CSS",
+                },
+                {
+                  icon: <SiTypescript color={iconColors.TS} />,
+                  name: "TypeScript",
+                },
+                { icon: <SiVite color={iconColors.VITE} />, name: "Vite" },
+              ].map((skill, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 hover:scale-105 transition-transform"
+                >
+                  <span className="text-2xl">{skill.icon}</span>
+                  <span className="font-medium text-gray-700">
+                    {skill.name}
+                  </span>
                 </div>
-                <p className="text-xs text-gray-600 ml-6">Markup language for structuring content.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaCss3Alt className="text-lg" />
-                  <span className="font-medium">CSS3</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Styling and responsive design.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaJsSquare className="text-lg" />
-                  <span className="font-medium">JavaScript</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Adds interactivity to web pages.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaReact className="text-lg" />
-                  <span className="font-medium">React</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Build dynamic single-page apps.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiTailwindcss className="text-lg" />
-                  <span className="font-medium">Tailwind CSS</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Utility-first CSS framework.</p>
-              </li>
-            </ol>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Backend Card */}
+          {/* BACKEND */}
           <motion.div
-            className="flex-1 min-w-[250px] bg-gray-100 p-4 rounded-xl shadow-md text-left"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 100 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            className="rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1 duration-300"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Backend</h3>
-            <ol className="space-y-3 text-gray-800 list-none">
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiFirebase className="text-lg" />
-                  <span className="font-medium">Firebase</span>
+            <h3 className="text-xl font-semibold mb-5 text-gray-800 border-b border-gray-200 pb-2">
+              Backend
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {
+                  icon: <SiFirebase color={iconColors.FIREBASE} />,
+                  name: "Firebase",
+                },
+                {
+                  icon: <SiExpress color={iconColors.EXPRESS} />,
+                  name: "Express.js",
+                },
+                { icon: <FaNodeJs color={iconColors.NODE} />, name: "Node.js" },
+                {
+                  icon: <SiMongodb color={iconColors.MONGO} />,
+                  name: "MongoDB",
+                },
+                {
+                  icon: <SiMongoose color={iconColors.MONGOOSE} />,
+                  name: "Mongoose",
+                },
+                { icon: <FaKey color={iconColors.JWT} />, name: "JWT" },
+                {
+                  icon: <FaLock color={iconColors.NEXTAUTH} />,
+                  name: "NextAuth.js",
+                },
+              ].map((skill, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 hover:scale-105 transition-transform"
+                >
+                  <span className="text-2xl">{skill.icon}</span>
+                  <span className="font-medium text-gray-700">
+                    {skill.name}
+                  </span>
                 </div>
-                <p className="text-xs text-gray-600 ml-6">Authentication & hosting services.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiExpress className="text-lg" />
-                  <span className="font-medium">Express.js</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Minimal backend framework for Node.js.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaNodeJs className="text-lg" />
-                  <span className="font-medium">Node.js</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Server-side JavaScript runtime.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiMongodb className="text-lg" />
-                  <span className="font-medium">MongoDB</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">NoSQL database for storing data.</p>
-              </li>
-              {/* JWT Added Here */}
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaKey className="text-lg" />
-                  <span className="font-medium">JWT (JSON Web Token)</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Secure user authentication & authorization.</p>
-              </li>
-            </ol>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Tools & Libraries Card */}
+          {/* TOOLS */}
           <motion.div
-            className="flex-1 min-w-[250px] bg-gray-100 p-4 rounded-xl shadow-md text-left"
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            className="rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1 duration-300"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Tools & Libraries</h3>
-            <ol className="space-y-3 text-gray-800 list-none">
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiReactrouter className="text-lg" />
-                  <span className="font-medium">React Router</span>
+            <h3 className="text-xl font-semibold mb-5 text-gray-800 border-b border-gray-200 pb-2">
+              Tools & Libraries
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {
+                  icon: <SiReactrouter color={iconColors.ROUTER} />,
+                  name: "React Router",
+                },
+                { icon: <FaTools color={iconColors.DAISY} />, name: "DaisyUI" },
+                {
+                  icon: <SiFramer color={iconColors.FRAMER} />,
+                  name: "Framer Motion",
+                },
+                { icon: <SiAxios color={iconColors.AXIOS} />, name: "Axios" },
+                {
+                  icon: <FaGithub color={iconColors.GITHUB} />,
+                  name: "GitHub",
+                },
+                { icon: <FaFigma color={iconColors.FIGMA} />, name: "Figma" },
+              ].map((skill, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 hover:scale-105 transition-transform"
+                >
+                  <span className="text-2xl">{skill.icon}</span>
+                  <span className="font-medium text-gray-700">
+                    {skill.name}
+                  </span>
                 </div>
-                <p className="text-xs text-gray-600 ml-6">Navigation in React applications.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaTools className="text-lg" />
-                  <span className="font-medium">DaisyUI</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Component library for Tailwind CSS.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiFramer className="text-lg" />
-                  <span className="font-medium">Framer Motion</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Smooth animations for React.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <SiAxios className="text-lg" />
-                  <span className="font-medium">Axios</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">HTTP client for API requests.</p>
-              </li>
-              <li>
-                <div className="flex items-center gap-2">
-                  <FaRegSmile className="text-lg" />
-                  <span className="font-medium">Lottie React</span>
-                </div>
-                <p className="text-xs text-gray-600 ml-6">Render animated illustrations easily.</p>
-              </li>
-            </ol>
+              ))}
+            </div>
           </motion.div>
         </div>
       </Container>
