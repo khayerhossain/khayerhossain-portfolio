@@ -2,11 +2,11 @@
   {
     "id": 1,
     "title": "SwapSkill",
-    "description": "A full-featured skill-sharing platform where users can learn, teach, and exchange skills with real-time chat, gamification, and secure payments — all powered by Next.js.",
+    "description": "A full-featured skill-sharing platform where users can learn, teach, and exchange skills with real-time chat, gamification, and secure payments all powered by Next.js.",
     "laptopImage": "https://i.ibb.co.com/rG0F6pwF/Screenshot-2025-11-01-182237.png",
     "mobileImage": "https://i.ibb.co.com/R3pKp6Q/swap-skill-mobile.png",
     "liveLink": "https://swap-skill-marketplace.vercel.app/",
-    "githubLink": "https://github.com/khayerhossain/swap-skill-marketplace",
+    "githubLink": "https://github.com/khayerhossain/SwapSkill-Marketplace",
     "details": {
       "features": [
         "Real-time chat with Socket.io",
