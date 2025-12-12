@@ -6,7 +6,7 @@ import {
   FaEnvelope,
   FaPaperPlane,
   FaUser,
-  FaCommentDots,
+  FaPencilAlt,
   FaGithub,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -54,6 +54,7 @@ const Contact = () => {
       subtitle: "Let's connect",
       detail: "Khayer Hossain",
       href: "https://www.linkedin.com/in/khayer-hossain/",
+      iconColor: "#0A66C2", // LinkedIn blue
     },
     {
       icon: <FaWhatsapp className="text-2xl" />,
@@ -61,6 +62,7 @@ const Contact = () => {
       subtitle: "Quick chat",
       detail: "+880 1917-006945",
       href: "https://wa.me/8801917006945?text=Hi%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect",
+      iconColor: "#25D366", // WhatsApp green
     },
     {
       icon: <FaTwitter className="text-2xl" />,
@@ -68,6 +70,7 @@ const Contact = () => {
       subtitle: "Follow updates",
       detail: "@khayerhossain45",
       href: "https://x.com/khayerhossain45",
+      iconColor: "#1DA1F2", // Twitter blue
     },
     {
       icon: <FaGithub className="text-2xl" />,
@@ -75,6 +78,7 @@ const Contact = () => {
       subtitle: "Check my code",
       detail: "github.com/khayerhossain",
       href: "https://github.com/khayerhossain",
+      iconColor: "#E6EDF3", // GitHub light gray
     },
   ];
 
@@ -91,7 +95,7 @@ const Contact = () => {
             className="inline-flex items-center gap-2 bg-[#1A1A1F] px-4 py-1.5 rounded-full mb-4 md:mb-6"
           >
             <FaEnvelope className="text-white text-sm" />
-            <span className="text-xs font-medium text-white">Get In Touch</span>
+            <span className="text-xs font-medium text-red-500">Get In Touch</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: -15 }}
@@ -154,7 +158,7 @@ const Contact = () => {
                   whileHover={{ y: -3 }}
                   className="bg-[#111115] border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all duration-300 group"
                 >
-                  <div className="text-white mb-3 w-10 h-10 bg-[#1A1A1F] rounded-lg flex items-center justify-center">
+                  <div className="mb-3 w-10 h-10 bg-[#1A1A1F] rounded-lg flex items-center justify-center" style={{ color: card.iconColor }}>
                     {card.icon}
                   </div>
                   <h3 className="font-semibold text-white text-base mb-0.5">
@@ -250,7 +254,7 @@ const Contact = () => {
                     Your Message
                   </label>
                   <div className="relative group">
-                    <FaCommentDots
+                    <FaPencilAlt
                       className={`absolute top-4 left-4 transition-colors duration-300 text-sm ${focusedInput === "message"
                         ? "text-white"
                         : "text-gray-500"

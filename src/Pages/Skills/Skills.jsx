@@ -78,7 +78,7 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#1A1A1F] border border-gray-800 mb-4">
-              <span className="text-xs font-medium text-gray-300 uppercase tracking-widest">
+              <span className="text-xs font-medium text-red-500 uppercase tracking-widest">
                 Expertise
               </span>
             </div>

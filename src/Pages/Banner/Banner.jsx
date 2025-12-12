@@ -29,8 +29,8 @@ const Banner = () => {
             >
               {[
                 { icon: <IoLogoLinkedin />, href: "https://www.linkedin.com/in/khayer-hossain", color: "text-[#0077B5]" },
+                { icon: <FaGithub />, href: "https://github.com/khayerhossain", color: "text-white" },
                 { icon: <FaInstagram />, href: "https://www.instagram.com/khayerhossain_45?igsh=NXNrOGY3dWwyYzlo&utm_source=qr", color: "text-[#E4405F]" },
-                { icon: <FaGithub />, href: "https://github.com/khayerhossain", color: "text-white" }
               ].map((item, index) => (
                 <a
                   key={index}
@@ -93,7 +93,7 @@ const Banner = () => {
                     window.scrollTo({ top: sectionTop, behavior: "smooth" });
                   }
                 }}
-                className="group relative px-6 py-3 bg-white text-black font-semibold rounded-xl overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 cursor-pointer"
+                className="group relative px-6 py-3 bg-white text-black font-semibold rounded-xl overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.3)]  transition-all duration-300 cursor-pointer"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Say Hello <FaPaperPlane className="group-hover:translate-x-1 transition-transform" />

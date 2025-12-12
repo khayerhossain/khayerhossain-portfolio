@@ -5,6 +5,7 @@ import {
   FaUserAlt,
   FaEnvelope,
   FaTools,
+  FaDownload,
 } from "react-icons/fa";
 import Logo from "../../assets/name-logo-white.png";
 
@@ -99,8 +100,9 @@ const Navbar = () => {
             href="https://drive.google.com/file/d/1CD9vE_EOekZiTieur2Lb6voIrTNf7dsX/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 bg-white text-black text-sm font-semibold rounded-xl transition-all duration-300"
+            className="px-5 py-2 bg-white text-black text-sm font-semibold rounded-xl transition-all duration-300 flex items-center gap-2"
           >
+            <FaDownload />
             Resume
           </a>
         </div>
