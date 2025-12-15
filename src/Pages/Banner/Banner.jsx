@@ -13,7 +13,7 @@ import Container from "../../Container/Container";
 
 const Banner = () => {
   return (
-    <section className="bg-[#050505] flex items-center py-[175px] relative overflow-hidden" id="home">
+    <section className="bg-[#050505] flex items-center py-[240px] relative overflow-hidden" id="home">
 
       <Container>
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">

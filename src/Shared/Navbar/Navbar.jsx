@@ -8,6 +8,7 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import Logo from "../../assets/name-logo-white.png";
+import Container from "../../Container/Container";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -58,7 +59,8 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 w-full z-50 bg-[#0a0a0f]/95 backdrop-blur-md">
-      <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-32 flex items-center justify-between py-4 relative">
+      <Container>
+<div className="w-full max-w-[1400px] flex items-center justify-between py-4 relative">
         {/* Left - Logo */}
         <div className="flex items-center gap-2">
           <img
@@ -145,6 +147,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      </Container>
     </div>
   );
 };
