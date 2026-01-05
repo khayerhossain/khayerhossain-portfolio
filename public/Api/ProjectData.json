@@ -37,7 +37,7 @@
     "id": 2,
     "title": "FitNexus",
     "description": "FitNexus is a complete gym management web app that streamlines memberships, scheduling, trainer assignments, and secure payments in one platform.",
-    "laptopImage": "https://i.ibb.co.com/KxPRnqdw/Screenshot-2025-11-03-193554.png",
+    "laptopImage": "https://i.ibb.co.com/zjvyPpp/Whats-App-Image-2026-01-05-at-20-28-20.jpg",
     "mobileImage": "",
     "liveLink": "https://fitnexus-14498.web.app/",
     "githubLink": "https://github.com/khayerhossain/fit-nexus",
@@ -78,44 +78,46 @@
   },
   {
     "id": 3,
-    "title": "DevScoop",
-    "description": "A modern platform for developers to showcase and discover projects, share ideas, and connect with the dev community.",
-    "laptopImage": "https://i.ibb.co.com/5hNfTm3X/Screenshot-2025-11-03-181508.png",
-    "mobileImage": "https://i.ibb.co/1GgbZV67/Screenshot-2025-06-28-231142-portrait.png",
-    "liveLink": "https://devscoop-509dd.web.app/",
-    "githubLink": "https://github.com/khayerhossain/dev-scoop",
+    "title": "Transify - Smart Logistics & Delivery Platform",
+    "description": "Transify is a modern, full-stack logistics and parcel delivery platform designed for speed, transparency, and reliability. Built with a focus on premium user experience and robust role-based management, it connects users, riders, and admins in a seamless delivery ecosystem.",
+    "laptopImage": "https://i.ibb.co.com/KzVJBSLm/transify-banner-image.jpg",
+    "mobileImage": "",
+    "liveLink": "https://transify-psi.vercel.app/",
+    "githubLink": "https://github.com/khayerhossain/transify",
     "details": {
       "features": [
-        "User signup/login with JWT authentication",
-        "Protected routes using react-router",
-        "CRUD operations for developer resources",
-        "Firebase email/password & Google authentication",
-        "Notifications via react-hot-toast",
-        "Responsive UI with Tailwind + DaisyUI",
-        "Smooth animations with Lottie and Framer Motion"
+        "Interactive & Dynamic Landing Page with Framer Motion animations",
+        "Secure Role-Based Dashboards (Admin, Rider, User)",
+        "Admin: User orchestration, logistics control, and financial insights",
+        "Rider: Job nexus, real-time status updates, and performance history",
+        "User: Instant booking, Stripe payments, and live parcel tracking",
+        "Integrated communication channels and notifications",
+        "Responsive design with nationwide coverage visualization"
       ],
       "techStack": {
         "frontend": [
-          "React",
-          "react-router-dom",
-          "tailwindcss",
-          "daisyui",
-          "firebase",
-          "react-icons",
-          "react-hot-toast",
-          "lottie-react",
-          "framer-motion"
+          "Next.js 15+ (App Router)",
+          "React 19",
+          "Tailwind CSS",
+          "DaisyUI",
+          "Framer Motion",
+          "Lucide React",
+          "React Icons"
         ],
         "backend": [
-          "Node.js",
-          "Express.js",
-          "MongoDB",
-          "dotenv",
-          "jsonwebtoken"
+          "Next.js API Routes",
+          "MongoDB (Native Driver)",
+          "NextAuth.js (Credentials & Google OAuth)",
+          "Stripe Integration"
+        ],
+        "others": [
+          "Recharts",
+          "React Hot Toast",
+          "SweetAlert2"
         ]
       },
-      "challenges": "Handling real-time authentication and ensuring smooth animations across devices was challenging.",
-      "futurePlans": "Add social login options and integrate AI-based project recommendations."
+      "challenges": "Implementing robust role-based access control and integrating real-time tracking with a seamless payment flow.",
+      "futurePlans": "Expand nationwide coverage and integrate AI-driven logistics optimization."
     }
   }
 ]
